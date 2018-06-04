@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:minWidth="25px"
+    p1:minHeight="25px"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/relativeLayout1">
+    <EditText
+        p1:hint="Age"
+        p1:inputType="number"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:maxLength="3"
+        p1:layout_marginLeft="75dp"
+        p1:id="@+id/editAge" />
+    <EditText
+        p1:hint="Height"
+        p1:inputType="number"
+        p1:layout_width="wrap_content"
+        p1:maxLength="4"
+        p1:layout_height="wrap_content"
+        p1:layout_marginLeft="75dp"
+        p1:layout_marginTop="50dp"
+        p1:id="@+id/editHeight" />
+    <EditText
+        p1:hint="Weight"
+        p1:inputType="number"
+        p1:layout_width="wrap_content"
+        p1:maxLength="4"
+        p1:layout_height="wrap_content"
+        p1:layout_marginLeft="75dp"
+        p1:layout_marginTop="100dp"
+        p1:id="@+id/editWeight" />
+    <TextView
+        p1:text="years"
+        p1:textSize="18dp"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_marginLeft="134dp"
+        p1:layout_marginTop="10dp"
+        p1:id="@+id/TextAge" />
+    <TextView
+        p1:text="cm"
+        p1:textSize="18dp"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_marginLeft="139dp"
+        p1:layout_marginTop="60dp"
+        p1:id="@+id/TextHeight" />
+    <TextView
+        p1:text="kg"
+        p1:textSize="18dp"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_marginLeft="139dp"
+        p1:layout_marginTop="110dp"
+        p1:id="@+id/TextWeight" />
+    <Button
+        p1:text="calculate"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_marginLeft="70dp"
+        p1:layout_marginTop="150dp"
+        p1:id="@+id/Calculate" />
+    <TextView
+        p1:text="Your BMI is:"
+        p1:textSize="18dp"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_marginLeft="50dp"
+        p1:layout_marginTop="220dp"
+        p1:id="@+id/TextBMI" />
+    <TextView
+        p1:text="You are: "
+        p1:textSize="18dp"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_marginLeft="50dp"
+        p1:layout_marginTop="260dp"
+        p1:id="@+id/TextCat" />
+    <Button
+        p1:text="save"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_marginLeft="70dp"
+        p1:layout_marginTop="285dp"
+        p1:id="@+id/Save" />
+</RelativeLayout>
