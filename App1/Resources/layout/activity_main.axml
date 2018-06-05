@@ -82,7 +82,14 @@
         p1:text="save"
         p1:layout_width="wrap_content"
         p1:layout_height="wrap_content"
-        p1:layout_marginLeft="70dp"
+        p1:layout_marginLeft="20dp"
         p1:layout_marginTop="285dp"
         p1:id="@+id/Save" />
+    <Button
+        p1:text="view"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_marginLeft="120dp"
+        p1:layout_marginTop="285dp"
+        p1:id="@+id/View" />
 </RelativeLayout>
