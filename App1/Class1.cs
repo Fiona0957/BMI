@@ -33,7 +33,7 @@ namespace App1
         }
         public override string ToString()
         {
-            return Date + " " + BMI + " " + Cat;
+            return Date + "     |||     " + BMI + "     |||     " + Cat;
         }
 
     }
