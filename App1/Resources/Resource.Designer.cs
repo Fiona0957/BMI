@@ -2189,8 +2189,8 @@ namespace App1
 			// aapt resource value: 0x7f08007d
 			public const int Save = 2131230845;
 			
-			// aapt resource value: 0x7f080077
-			public const int TextAge = 2131230839;
+			// aapt resource value: 0x7f080075
+			public const int TextAge = 2131230837;
 			
 			// aapt resource value: 0x7f08007b
 			public const int TextBMI = 2131230843;
@@ -2198,8 +2198,8 @@ namespace App1
 			// aapt resource value: 0x7f08007c
 			public const int TextCat = 2131230844;
 			
-			// aapt resource value: 0x7f080078
-			public const int TextHeight = 2131230840;
+			// aapt resource value: 0x7f080077
+			public const int TextHeight = 2131230839;
 			
 			// aapt resource value: 0x7f080079
 			public const int TextWeight = 2131230841;
@@ -2360,11 +2360,11 @@ namespace App1
 			// aapt resource value: 0x7f080074
 			public const int editAge = 2131230836;
 			
-			// aapt resource value: 0x7f080075
-			public const int editHeight = 2131230837;
-			
 			// aapt resource value: 0x7f080076
-			public const int editWeight = 2131230838;
+			public const int editHeight = 2131230838;
+			
+			// aapt resource value: 0x7f080078
+			public const int editWeight = 2131230840;
 			
 			// aapt resource value: 0x7f080066
 			public const int edit_query = 2131230822;

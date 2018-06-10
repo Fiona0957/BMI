@@ -27,7 +27,7 @@ namespace App1
 
             BMISave myBMI = new BMISave(date, adds, category);
 
-            BMISave[] BMIList = { myBMI};
+            BMISave[] BMIList = {myBMI};
 
             ListAdapter = new ArrayAdapter<BMISave>(this, Android.Resource.Layout.SimpleListItem1, BMIList);
         }
