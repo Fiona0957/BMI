@@ -22,12 +22,12 @@ namespace App1
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.View);
-            string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "dbBMI.db3");
+            SetContentView(Resource.Layout.BMIView);
+            string dbPaths = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "dbBMI.db3");
                        Button buttonClear = FindViewById<Button>(Resource.Id.Clear);
             TextView TextDB = FindViewById<TextView>(Resource.Id.TextDB);
 
-            var db = new SQLiteConnection(dbPath);
+            var db = new SQLiteConnection(dbPaths);
 
             var table = db.Table<BMISave>();
 
@@ -40,7 +40,7 @@ namespace App1
 
             buttonClear.Click += delegate
             {
-                DeleteDatabase(dbPath);
+                DeleteDatabase(dbPaths);
                 TextDB.Text = "";
                 
             };

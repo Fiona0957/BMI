@@ -17,7 +17,6 @@ namespace App1
         public string Date { get; set; }
         public string BMI { get; set; }
         public string Cat { get; set; }
-        public int count;
 
         public BMISave(string date, string bmi, string category)
         {

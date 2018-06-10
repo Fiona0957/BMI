@@ -23,7 +23,7 @@ namespace App1
         int BMI = 0;
 
 
-        string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "dbBMI.db3");
+        string dbPaths = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "dbBMI.db3");
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -110,7 +110,7 @@ namespace App1
                         category = "Obese";
 
 
-                    var db = new SQLiteConnection(dbPath);
+                    var db = new SQLiteConnection(dbPaths);
 
                     db.CreateTable<BMISave>();
 
@@ -129,7 +129,7 @@ namespace App1
             buttonView.Click += delegate
             {
 
-                var db = new SQLiteConnection(dbPath);
+                var db = new SQLiteConnection(dbPaths);
 
                 db.CreateTable<BMISave>();
                 StartActivity(typeof(ViewBMIActivity));

@@ -99,7 +99,7 @@
     <PackageReference Include="Xamarin.Android.Support.Design" Version="25.4.0.2" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\View.axml">
+    <AndroidResource Include="Resources\layout\BMIView.axml">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </AndroidResource>
