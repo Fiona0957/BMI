@@ -1,36 +1,52 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
+﻿using Android.App;
+using Android.Widget;
 using Android.OS;
+using Android.Support.V7.App;
+using System;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using SQLite;
+using System.Text;
+using Android.Content;
 using Android.Runtime;
 using Android.Views;
-using Android.Widget;
 
 namespace App1
 {
     [Activity(Label = "ViewBMIActivity")]
 
-    public class ViewBMIActivity : ListActivity
+    public class ViewBMIActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            SetContentView(Resource.Layout.View);
+            string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "dbBMI.db3");
+                       Button buttonClear = FindViewById<Button>(Resource.Id.Clear);
+            TextView TextDB = FindViewById<TextView>(Resource.Id.TextDB);
 
-            var localBMI = Application.Context.GetSharedPreferences("MyBMI", FileCreationMode.Private);
-            string date = localBMI.GetString("Date", null);
-            string adds = localBMI.GetString("BMI", null);
-            string category = localBMI.GetString("Category", null);
+            var db = new SQLiteConnection(dbPath);
 
-            BMISave myBMI = new BMISave(date, adds, category);
+            var table = db.Table<BMISave>();
 
-            BMISave[] BMIList = {myBMI};
+            foreach (var item in table)
+            {
+                BMISave myBMI = new BMISave(item.Date, item.BMI, item.Cat);
+                TextDB.Text += myBMI + "\n";
 
-            ListAdapter = new ArrayAdapter<BMISave>(this, Android.Resource.Layout.SimpleListItem1, BMIList);
+            }
+
+            buttonClear.Click += delegate
+            {
+                DeleteDatabase(dbPath);
+                TextDB.Text = "";
+                
+            };
+                
+                
+            }
+  
         }
-    }    
-
-}
+    }

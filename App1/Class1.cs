@@ -17,12 +17,14 @@ namespace App1
         public string Date { get; set; }
         public string BMI { get; set; }
         public string Cat { get; set; }
+        public int count;
 
         public BMISave(string date, string bmi, string category)
         {
             Date = date;
             BMI = bmi;
             Cat = category;
+           
         }
 
         public BMISave()
@@ -33,5 +35,6 @@ namespace App1
         {
             return Date + " " + BMI + " " + Cat;
         }
+
     }
 }

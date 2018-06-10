@@ -2186,6 +2186,9 @@ namespace App1
 			// aapt resource value: 0x7f08007a
 			public const int Calculate = 2131230842;
 			
+			// aapt resource value: 0x7f0800a5
+			public const int Clear = 2131230885;
+			
 			// aapt resource value: 0x7f08007d
 			public const int Save = 2131230845;
 			
@@ -2197,6 +2200,9 @@ namespace App1
 			
 			// aapt resource value: 0x7f08007c
 			public const int TextCat = 2131230844;
+			
+			// aapt resource value: 0x7f0800a7
+			public const int TextDB = 2131230887;
 			
 			// aapt resource value: 0x7f080077
 			public const int TextHeight = 2131230839;
@@ -2438,14 +2444,17 @@ namespace App1
 			// aapt resource value: 0x7f0800a1
 			public const int line3 = 2131230881;
 			
+			// aapt resource value: 0x7f0800a4
+			public const int linearLayout1 = 2131230884;
+			
 			// aapt resource value: 0x7f08000f
 			public const int listMode = 2131230735;
 			
 			// aapt resource value: 0x7f080048
 			public const int list_item = 2131230792;
 			
-			// aapt resource value: 0x7f0800a5
-			public const int masked = 2131230885;
+			// aapt resource value: 0x7f0800a9
+			public const int masked = 2131230889;
 			
 			// aapt resource value: 0x7f080093
 			public const int media_actions = 2131230867;
@@ -2524,6 +2533,9 @@ namespace App1
 			
 			// aapt resource value: 0x7f080050
 			public const int scrollView = 2131230800;
+			
+			// aapt resource value: 0x7f0800a6
+			public const int scrollView1 = 2131230886;
 			
 			// aapt resource value: 0x7f080040
 			public const int scrollable = 2131230784;
@@ -2672,8 +2684,8 @@ namespace App1
 			// aapt resource value: 0x7f08000e
 			public const int view_offset_helper = 2131230734;
 			
-			// aapt resource value: 0x7f0800a4
-			public const int visible = 2131230884;
+			// aapt resource value: 0x7f0800a8
+			public const int visible = 2131230888;
 			
 			// aapt resource value: 0x7f080027
 			public const int withText = 2131230759;
@@ -2916,6 +2928,9 @@ namespace App1
 			
 			// aapt resource value: 0x7f04003c
 			public const int support_simple_spinner_dropdown_item = 2130968636;
+			
+			// aapt resource value: 0x7f04003d
+			public const int View = 2130968637;
 			
 			static Layout()
 			{

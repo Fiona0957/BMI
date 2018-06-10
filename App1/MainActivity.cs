@@ -1,7 +1,6 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
-using Android.Support.V7.App;
 using System;
 using System.Linq;
 using System.Collections;
@@ -12,6 +11,8 @@ using System.Text;
 using Android.Content;
 using Android.Runtime;
 using Android.Views;
+using Android.Support.V7.App;
+
 
 
 namespace App1
@@ -20,6 +21,8 @@ namespace App1
     public class MainActivity : AppCompatActivity
     {
         int BMI = 0;
+
+
         string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "dbBMI.db3");
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -35,6 +38,8 @@ namespace App1
             EditText EditWeight = FindViewById<EditText>(Resource.Id.editWeight);
             TextView TextCat = FindViewById<TextView>(Resource.Id.TextCat);
             EditText EditAge = FindViewById<EditText>(Resource.Id.editAge);
+            TextView TextDB = FindViewById<TextView>(Resource.Id.TextDB);
+            
 
             BMI = BMI + 1;
 
@@ -80,7 +85,7 @@ namespace App1
                 bool parsedH = Double.TryParse(EditHeight.Text, out numHeight);
                 bool parsedW = Double.TryParse(EditWeight.Text, out numWeight);
                 bool parsedA = int.TryParse(EditAge.Text, out numAge);
-
+                
 
 
                 if (parsedH && parsedW && parsedA)
@@ -104,12 +109,15 @@ namespace App1
                     if (add > 30)
                         category = "Obese";
 
-                    var localBMI = Application.Context.GetSharedPreferences("MyBMI", FileCreationMode.Private);
-                    var BMIEdit = localBMI.Edit();
-                    BMIEdit.PutString("Date", date);
-                    BMIEdit.PutString("BMI", adds);
-                    BMIEdit.PutString("Category", category);
-                    BMIEdit.Commit();
+
+                    var db = new SQLiteConnection(dbPath);
+
+                    db.CreateTable<BMISave>();
+
+                    BMISave mybmi = new BMISave(date, adds, category);
+
+                    db.Insert(mybmi);
+                   
                 }
                 else
                 {
@@ -120,15 +128,17 @@ namespace App1
 
             buttonView.Click += delegate
             {
+
+                var db = new SQLiteConnection(dbPath);
+
+                db.CreateTable<BMISave>();
                 StartActivity(typeof(ViewBMIActivity));
-
-
-
-
-
+   
+              
             };
         }
     }
+ 
 }
 
 
