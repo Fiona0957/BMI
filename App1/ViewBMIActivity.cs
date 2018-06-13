@@ -34,7 +34,7 @@ namespace App1
             foreach (var item in table)
             {
                 BMISave myBMI = new BMISave(item.Date, item.BMI, item.Cat);
-                TextDB.Text += myBMI + "\n";
+                TextDB.Text += myBMI + "2\n";
 
             }
 

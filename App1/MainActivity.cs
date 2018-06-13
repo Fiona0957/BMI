@@ -20,7 +20,7 @@ namespace App1
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
-        int BMI = 0;
+        int BMI = 34;
 
 
         string dbPaths = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "dbBMI.db3");
