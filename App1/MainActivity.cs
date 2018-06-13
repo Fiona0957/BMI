@@ -107,7 +107,7 @@ namespace App1
                     if (add > 25 && add <= 30)
                         category = "Overweight";
                     if (add > 30)
-                        category = "Obese";
+                        category = "Ode";
 
 
                     var db = new SQLiteConnection(dbPaths);
