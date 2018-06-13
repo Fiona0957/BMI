@@ -41,7 +41,7 @@ namespace App1
             TextView TextDB = FindViewById<TextView>(Resource.Id.TextDB);
             
 
-            BMI = BMI + 1;
+            BMI = BMI + 2;
 
 
 
